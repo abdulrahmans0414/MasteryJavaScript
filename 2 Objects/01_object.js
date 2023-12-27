@@ -14,9 +14,12 @@ const person = {
 console.log(person);
 
 // how to access data from objects
-console.log(person.name);
+// console.log(person.name);
+console.log(person["name"]);
 console.log(person.hobbies);
 
 // how to add key value pairs to objects 
-person.gender = 'male';
+// person.gender = 'male';
+person["person"]= "male";
+
 console.log(person);
