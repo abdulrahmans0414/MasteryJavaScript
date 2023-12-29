@@ -61,3 +61,29 @@ function isEven(number) {
     return number % 2 === 0;
 }
 console.log(isEven(12));
+
+
+// for example create a function 
+// input : string
+// output :firstCharacter
+function firstChar(anyString) {
+    return anyString[0];
+}
+console.log(firstChar("abdul"));
+
+
+// for example create a function
+// input : array, target(number)
+// output : index of target if target present in aarray
+// [1,2,5,9,27] 9  in 3 index  
+
+function findTarget(array, target) {
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] === target) {
+            return i;
+        }
+    } return -1
+}
+const myArray = [1, 3, 5, 9, 27]
+const ans = findTarget(myArray, 9)
+console.log("Target value found at index :", ans);
