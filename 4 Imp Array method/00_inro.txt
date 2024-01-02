@@ -1,0 +1,12 @@
+// important array methods
+
+// forEach method
+// map method
+// filter method
+// reduce method
+// sort method
+// find method
+// every method
+// some methods
+// fill method
+// splice method
