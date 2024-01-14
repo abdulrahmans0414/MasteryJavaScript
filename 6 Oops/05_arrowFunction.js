@@ -10,3 +10,13 @@ const user1 = {
     }
 }
 user1.about();
+
+// sort syntax
+const user2 = {
+    firstName: 'Rehan',
+    age: 17,
+    about() {
+        console.log(this.firstName, this.age);
+    }
+}
+user2.about();
