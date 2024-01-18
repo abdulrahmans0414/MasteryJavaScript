@@ -37,5 +37,3 @@ console.log(user03);
 console.log(user01.about());
 console.log(user01.sing());
 
-
-// improve code below
