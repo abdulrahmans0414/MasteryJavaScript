@@ -1,3 +1,5 @@
+// Learn about Object.create using create empty object and Learn about __proto__
+
 // for example
 const obj1 = {
     key1: "value1",
@@ -36,5 +38,5 @@ console.log(obj2.key2);
 console.log(obj2.__proto__);
 
 // __proto__ in offical ecmascript documentation written as [[prototype]]
-// and prototype is different things which i learn new feture
+// and prototype is different things which i learn in feture
 
