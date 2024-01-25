@@ -1,0 +1,32 @@
+#Code ->
+1 compile  
+2 code execute
+
+
+#Compilation Phase ->
+1 Tokenize / lexical
+2 Parsing -> AST (Abstract Syntax Tree)
+3 Code Generation -> Executable code generated from
+
+
+#why Compilation
+
+#example ->
+console.log(this);
+console.log(window);
+console.log(firstName);
+var firstName = "Abdul";
+
+#ECMAScript Documention->
+1 Early Error Checking
+2 Determining appropiate scope for variable
+  -a) Global scope -> firstName
+
+
+#Code Execute Phase ->  
+- In javascript code executes inside execution context
+  1- Global Execution context -> Stack
+   a) Creation Phase --> window : {} | firstName : undefined | this : window(globle object) | Globale Memory
+   b) Code Execution pase --> execute line by line
+
+#JavaScript -> synchronous programming language | Single Thread
