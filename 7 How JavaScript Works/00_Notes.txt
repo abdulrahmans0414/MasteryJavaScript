@@ -30,3 +30,7 @@ var firstName = "Abdul";
    b) Code Execution pase --> execute line by line
 
 #JavaScript -> synchronous programming language | Single Thread
+
+
+#Hoisting 
+Hoisting is a behavior in JavaScript where variable and function declarations are moved to the top of their containing scope during the compilation phase. This means that you can use a variable or a function before it's declared in your code.
