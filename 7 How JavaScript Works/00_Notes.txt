@@ -33,4 +33,27 @@ var firstName = "Abdul";
 
 
 #Hoisting 
-Hoisting is a behavior in JavaScript where variable and function declarations are moved to the top of their containing scope during the compilation phase. This means that you can use a variable or a function before it's declared in your code.
+Hoisting is a behavior in JavaScript where variable and function declarations are moved to the top of their containing scope during the compilation phase. 
+This means that you can use a variable or a function before it's declared in your code.
+
+
+#In case of function expression -> Its treat like variable
+
+#TDZ -> unintialize
+Temporal Dead Zone
+
+#Example ->
+// function execution context 
+
+let foo = "foo";
+console.log(foo);
+function getFullName(firstName, lastName) {
+    console.log(arguments);
+    let myVar = "var inside func";
+    console.log(myVar);
+    const fullName = firstName + " " + lastName;
+    return fullName;
+}
+
+const personName = getFullName("harshit", "sharma");
+console.log(personName);

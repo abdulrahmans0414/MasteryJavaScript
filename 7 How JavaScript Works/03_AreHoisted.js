@@ -10,11 +10,11 @@
 // firstName is not defined
 
 // console.log(firstName);  // unintialization / if not create varible and called then give not define
-let firstName = "Abdul";
+let firstName = "Abdul";  // initialize firstName 
 console.log(firstName); // assigned undefine to Abdul
 
 
-// In case of const variable
+// In case  of const variable
 // hoisting
 
 // console.log(lastName); 
