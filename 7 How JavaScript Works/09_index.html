@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./09_style.css" />
+
+    <!-- 1 type to link js file -->
+    <!--Browser load index.js file ... after that execute -> error because parsing stop-->
+    <!-- <script src="./09_index.js"></script>   -->
+
+    <!-- 3 type to link js file  -->
+    <!-- browser parsing and loading at same time   and when loding complete then execute if not total parse then give errors  -->
+    <!-- <script src="./09_index.js async"></script>   -->
+
+    <!-- 4 type to link js file -->
+    <!-- browser parsing and loading simentiously if loading complete he waited to complete parsing then execute  -->
+    <script src="./09_index.js" defer></script>
+    <title>My Website</title>
+
+</head>
+
+<body>
+
+    <h1> How to link js file </h1>
+
+    <!-- 2 type to link js file -->
+    <!-- lode and execute both proper work if we add js file bottom  because broweser parse HTML then js file load then execute-->
+    <!-- <script src="./09_index.js"></script> -->
+
+</body>
+
+</html>
