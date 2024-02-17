@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>DOM</title>
+    <style>
+        .bg-black {
+            background-color: #212121;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body class="bg-black">
+    <div>
+        <h1 id="title" class="heading">Learning DOM concepts <span style="display: none;">test text</span></h1>
+        <h2>Heading 2.</h2>
+        <h2>Heading 2.</h2>
+        <h2>Heading 2.</h2>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <input type="password" name="" id="">
+        <ul>
+            <li class="list-item">one</li>
+            <li class="list-item">two</li>
+            <li class="list-item">three</li>
+        </ul>
+    </div>
+
+    <script>
+
+        // id selector
+        const title = document.getElementById("title")
+        console.log(title);
+
+        console.log(document.getElementById("title").id);
+        console.log(document.getElementById("title").className);
+
+
+        // get attributes
+        console.log(document.getElementById("title").getAttribute("id"));
+        console.log(document.getElementById("title").getAttribute("class"));
+
+        // set attributes
+        console.log(document.getElementById("title").setAttribute("class", "test heading"));
+
+        // style element inserted
+        title.style = "color:black"
+        title.style.backgroundColor = "green"
+        title.style.padding = "15px"
+
+        // how to add content
+        // textContent | innerHTML | innerText
+        console.log(title.innerText);
+        console.log(title.textContent);
+        console.log(title.innerHTML);
+
+        // query selector
+        const heading2 = document.querySelector("h2")
+        console.log(heading2);
+
+        // query selector to select id
+        console.log(document.querySelector("#title"));
+
+        // query selector to select class
+        console.log(document.querySelector(".heading"));
+
+        // query selector select input
+        console.log(document.querySelector("input[type=password]"));
+
+        // query selector to select css property like
+        console.log(document.querySelector("p:first-child"));
+
+        const myul = document.querySelector("ul");
+        console.log(myul);
+
+        //we can futher query selector on myul
+        const turnGreen = myul.querySelector("li")
+        turnGreen.style.backgroundColor = "green";
+        turnGreen.style.padding = "10px";
+        turnGreen.innerText = "five";
+
+
+        // query selector All 
+        const tempLiList = document.querySelectorAll("li")
+        console.log(tempLiList); // not array
+        //    tempLiList[1].style.backgroundColor = "red"; // not work because array like so add []
+
+
+        const myh1 = document.querySelectorAll("h1");
+        console.log(myh1);
+        myh1[0].style.color = "red";
+
+        // we can use on nodelist in for each method because its array like treat 
+        tempLiList.forEach(function (l) {
+            l.style.backgroundColor = "grey";
+        })
+
+
+        // className selector
+        const tempClassList = document.getElementsByClassName("list-item")
+        console.log(tempClassList); // HTML collection
+
+        // Convert HTML collection to array
+        // Array.from(tempClassList)  // Array
+
+        const myConvertedArray = Array.from(tempClassList)
+        myConvertedArray.forEach(function (li) {
+            li.style.color = "orange"
+        })
+
+    </script>
+
+</body>
+
+</html>
