@@ -4,7 +4,7 @@
 
 [Click here](https://github.com/abdulrahmans0414/MasteryJavaScript)
 
-# Solution code
+## Solution code
 
 ## Project - 1
 
@@ -68,5 +68,22 @@ form.addEventListener("submit", function (e) {
     results.innerHTML = `<span> ${bmi}</span>`;
   }
 });
+
+```
+
+## project - 3
+
+## Digital Clock
+
+```javascript
+// select clock
+const clock = document.getElementById("clock");
+
+// Event control
+setInterval(() => {
+  let date = new Date();
+  // console.log(date.toLocaleTimeString());
+  clock.innerHTML = date.toLocaleTimeString();
+}, 1000);
 
 ```
