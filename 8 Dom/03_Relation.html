@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>DOM</title>
+
+</head>
+
+<body style="background-color: #212121; color: #fff;">
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thrusday</div>
+    </div>
+
+    <script>
+
+        // parent to child select
+        const parent = document.querySelector(".parent")
+        console.log(parent);
+        console.log(parent.children); // HTML collections
+        console.log(parent.children[1]); //Array like element
+        console.log(parent.children[1].innerHTML);
+
+        // Array like element ->
+        for (let i = 0; i < parent.children.length; i++) {
+            console.log(parent.children[i].innerHTML);
+
+        }
+        parent.children[1].style.color = "green";
+
+        // first element child
+        console.log(parent.firstElementChild);
+        console.log(parent.lastElementChild);
+
+
+        // child to parent select
+        const dayOne = document.querySelector('.day')
+        console.log(dayOne);
+        console.log(dayOne.parentElement);
+        console.log(dayOne.nextElementSibling);
+
+        // Node list of children
+        console.log("NODES: ", parent.childNodes);
+
+    </script>
+
+</body>
+
+</html>
