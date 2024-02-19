@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+</head>
+
+<body>
+    <h1>Click Event</h1>
+    <div class="mybuttons">
+        <button id="one">my button one</button>
+        <button id="two">my button two</button>
+        <button id="three">my button three</button>
+    </div>
+
+
+    <script>
+
+        // click event on multiple buttons 
+        const allButtons = document.querySelectorAll('.mybuttons button');
+
+        // for of loop
+        for (let button of allButtons) {
+            button.addEventListener('click', function () {
+                // console.log(this);
+                console.log(this.textContent);
+            });
+        }
+
+        // forEach loop
+        allButtons.forEach(function (button) {
+            button.addEventListener('click', function () {
+                console.log(this.textContent);
+            });
+        })
+
+        // but in case of arrow function its not working becase this give window
+        for (let button of allButtons) {
+            button.addEventListener('click', () => {
+                // console.log(this);
+                console.log(this.textContent);
+            });
+        }
+
+    </script>
+</body>
+
+</html>
