@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+</head>
+
+<body>
+    <h1>This Keyword</h1>
+    <button class="btn">BUTTON</button>
+
+
+
+
+    <script>
+
+        const btn = document.querySelector(".btn")
+
+        // in case of function declaration value of this is btn
+        btn.addEventListener("click", function () {
+            console.log("you clicked !!!");
+            console.log(this);
+        });
+
+        // in case of arrow function value of this is window 
+        btn.addEventListener("click", () => {
+            console.log("you clicked !!!");
+            console.log(this);
+        });
+
+    </script>
+</body>
+
+</html>
