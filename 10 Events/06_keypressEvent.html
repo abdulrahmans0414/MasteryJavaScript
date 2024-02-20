@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+</head>
+<body>
+    <h1>Keypress Event</h1>
+    <p>body me kahi pe bhi mai kuch bhi keybord se button press karun <br>toh mujhe pta lage maine kon sa button press kia hain </p>
+
+    <script>
+        // keypress event
+        const body = document.querySelector('body');
+        body.addEventListener('keypress', (e)=>{
+            console.log(e.key);
+        });
+    </script>
+</body>
+</html>
