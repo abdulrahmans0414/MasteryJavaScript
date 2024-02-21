@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asynchronous Javascript</title>
+</head>
+
+<body>
+    <h1 class="heading1">Hello world !!</h1>
+    <h1 class="heading2">Hello world !!</h1>
+    <h1 class="heading3">Hello world !!</h1>
+    <h1 class="heading4">Hello world !!</h1>
+    <h1 class="heading5">Hello world !!</h1>
+    <h1 class="heading6">Hello world !!</h1>
+    <h1 class="heading7">Hello world !!</h1>
+
+
+
+
+
+
+    <script>
+        // callbacks , callback hell, pyramid of doom
+        // asynchronous programming
+        const heading1 = document.querySelector(".heading1");
+        const heading2 = document.querySelector(".heading2");
+        const heading3 = document.querySelector(".heading3");
+        const heading4 = document.querySelector(".heading4");
+        const heading5 = document.querySelector(".heading5");
+        const heading6 = document.querySelector(".heading6");
+        const heading7 = document.querySelector(".heading7");
+        const heading8 = document.querySelector(".heading8");
+        const heading9 = document.querySelector(".heading9");
+        const heading10 = document.querySelector(".heading10");
+
+
+        // Normal approch ->
+        // setTimeout(()=>{
+        //     heading1.textContent = "Heading 1";
+        //     heading1.style.backgroundColor ="violet";
+        // }, 1000)
+
+        // setTimeout(()=>{
+        //     heading2.textContent = "Heading 2";
+        //     heading2.style.backgroundColor ="purple";
+        // }, 2000)
+
+        // problem ->
+        // Text       Delay   Color
+
+        // one        1s      Violet
+        // two        2s      purple
+        // three      2s      red
+        // four       1s      Pink
+        // five       2s      green
+        // six        3s      blue
+        // seven      1s      brown
+
+        // callback hell
+        setTimeout(() => {
+            heading1.textContent = "one";
+            heading1.style.color = "violet";
+            setTimeout(() => {
+                heading2.textContent = "two";
+                heading2.style.color = "purple";
+                setTimeout(() => {
+                    heading3.textContent = "three";
+                    heading3.style.color = "red";
+                    setTimeout(() => {
+                        heading4.textContent = "four";
+                        heading4.style.color = "pink";
+                        setTimeout(() => {
+                            heading5.textContent = "five";
+                            heading5.style.color = "green";
+                        }, 2000)
+
+                    }, 1000)
+
+                }, 2000)
+
+            }, 2000)
+
+        }, 1000)
+
+    </script>
+</body>
+
+</html>
