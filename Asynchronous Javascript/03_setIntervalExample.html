@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asynchronous Javascript</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            outline: none;
+            border: none;
+            padding: 1rem 1.5rem;
+            cursor: pointer;
+            font-size: 3rem;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.322);
+            transition: all 0.4s;
+        }
+
+        button:hover {
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.374);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Practical example of setInterval</h1>
+    <button class="btn">Stop Changeing !!!</button>
+
+
+
+
+    <script>
+        const body = document.body;
+        const btn = document.querySelector(".btn")
+
+        const intervalID = setInterval(() => {
+            const red = Math.floor(Math.random() * 126)
+            const green = Math.floor(Math.random() * 126)
+            const blue = Math.floor(Math.random() * 126)
+            const rgb = `rgb(${red}, ${green}, ${blue})`
+            body.style.backgroundColor = rgb
+        }, 1000)
+        btn.addEventListener("click", function () {
+            clearInterval(intervalID)
+            btn.textContent = body.style.backgroundColor;
+        });
+
+    </script>
+</body>
+
+</html>

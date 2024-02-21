@@ -26,6 +26,7 @@ for (let i = 0; i < 100; i++) {
 
 console.log("setTimeout id is", id);
 
+// clearTimeout ->
 // function cannot run if i clearTimeout
 console.log("clearing time out");
 clearTimeout(id);
