@@ -15,6 +15,9 @@
     <h1 class="heading5">Hello world !!</h1>
     <h1 class="heading6">Hello world !!</h1>
     <h1 class="heading7">Hello world !!</h1>
+    <h1 class="heading8">Hello world !!</h1>
+    <h1 class="heading9">Hello world !!</h1>
+    <h1 class="heading10">Hello world !!</h1>
 
 
 
@@ -59,30 +62,92 @@
         // seven      1s      brown
 
         // callback hell
-        setTimeout(() => {
-            heading1.textContent = "one";
-            heading1.style.color = "violet";
+        // setTimeout(() => {
+        //     heading1.textContent = "one";
+        //     heading1.style.color = "violet";
+        //     setTimeout(() => {
+        //         heading2.textContent = "two";
+        //         heading2.style.color = "purple";
+        //         setTimeout(() => {
+        //             heading3.textContent = "three";
+        //             heading3.style.color = "red";
+        //             setTimeout(() => {
+        //                 heading4.textContent = "four";
+        //                 heading4.style.color = "pink";
+        //                 setTimeout(() => {
+        //                     heading5.textContent = "five";
+        //                     heading5.style.color = "green";
+        //                 }, 2000)
+
+        //             }, 1000)
+
+        //         }, 2000)
+
+        //     }, 2000)
+
+        // }, 1000)
+
+
+        // same above example with function approch
+        // function changeText(element, text, color, time) {
+        //     setTimeout(() => {
+        //         if (element) {
+        //             element.textContent = text;
+        //             element.style.color = color;
+        //         } else {
+        //             console.log("your element does not exist");
+        //         }
+
+        //     }, time)
+        // }
+        // changeText(heading1, "one", "violet", 1000);
+
+
+        // same as above but some implementation to undersatanding callback
+        // agar hme heading1 ke voilet hone ke baad kuch kaam krna hain
+        // uske liye use karenge callback
+        // if i use onSuccessCallback 
+        // and if occure any error for that use failure callback 
+
+        function changeText(element, text, color, time, onSuccessCallback, onFailureCallback) {
             setTimeout(() => {
-                heading2.textContent = "two";
-                heading2.style.color = "purple";
-                setTimeout(() => {
-                    heading3.textContent = "three";
-                    heading3.style.color = "red";
-                    setTimeout(() => {
-                        heading4.textContent = "four";
-                        heading4.style.color = "pink";
-                        setTimeout(() => {
-                            heading5.textContent = "five";
-                            heading5.style.color = "green";
-                        }, 2000)
+                if (element) {
+                    element.textContent = text;
+                    element.style.color = color;
+                    if (onFailureCallback) {
+                        onSuccessCallback();
+                    }
+                } else {
+                    if (onFailureCallback) {
+                        onFailureCallback();
+                    }
+                }
+            }, time)
+        }
 
-                    }, 1000)
+        // pyramid of doom
+        changeText(heading1, "one", "violet", 1000, () => {
+            changeText(heading2, "two", "purple", 2000, () => {
+                changeText(heading3, "three", "red", 1000, () => {
+                    changeText(heading4, "four", "pink", 1000, () => {
+                        changeText(heading5, "five", "green", 2000, () => {
+                            changeText(heading6, "six", "blue", 1000, () => {
+                                changeText(heading7, "seven", "brown", 1000, () => {
+                                    changeText(heading8, "eight", "cyan", 1000, () => {
+                                        changeText(heading9, "nine", "#cda562", 1000, () => {
+                                            changeText(heading10, "ten", "#dca652", 1000, () => {
 
-                }, 2000)
+                                            }, () => { console.log("Heading10 does not exist") })
+                                        }, () => { console.log("Heading9 does not exist") })
+                                    }, () => { console.log("Heading8 does not exist") })
+                                }, () => { console.log("Heading7 does not exist") })
+                            }, () => { console.log("Heading6 does not exist") })
+                        }, () => { console.log("Heading5 does not exist") })
+                    }, () => { console.log("Heading4 does not exist") })
+                }, () => { console.log("Heading3 does not exist") })
+            }, () => { console.log("Heading2 does not exist") })
+        }, () => { console.log("Heading1 does not exist") })
 
-            }, 2000)
-
-        }, 1000)
 
     </script>
 </body>
