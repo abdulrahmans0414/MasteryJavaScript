@@ -37,11 +37,11 @@ const friedRice = new Promise((resolve, reject) => {
 // How to consume a promise
 // consume promise =>>
 friedRice.then(
-    // jab promice resolve hoga
+    // jab promice resolve hoga 
     (myFriedRice) => {
         console.log("Received", myFriedRice);
     },
-    // jab promice reject hoga
+    // jab promice reject hoga 
     (error) => {
         console.log(error);
     })
